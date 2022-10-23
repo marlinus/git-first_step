@@ -10,6 +10,10 @@ class Request {
 	public function get(string $key, $default = null) {
 		return (isset($_GET[$key]) && trim($_GET[$key]) !== '') ? (int) $_GET[$key] : $default;
 	}
+
+	public function post() {
+
+	}
 }
 
 class DB {
