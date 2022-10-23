@@ -4,5 +4,20 @@ async function main() {
 }
 
 main().then(data => {
-	console.log(data);
+
+	document.querySelector('.wrapper')
+		.innerHTML = createUlList(data);
+	
 });
+
+function createUlList(data) {
+	let out = '<ul>';
+	
+	data.forEach(item => {
+		out += `<li>${item.title}</li>`;
+	})
+	
+	out += '</ul>'
+	
+	return out;
+}
